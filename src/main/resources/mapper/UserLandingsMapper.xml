@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="edu.swjuhc.houduan.mapper.UserLandingsMapper">
+	<resultMap type="edu.swjuhc.houduan.model.SysUser" id="SysUser_landings">
+		<result column="Usernumber" property="j_username" javaType="java.lang.String" jdbcType="CHAR"/>
+		<result column="Password" property="j_password" javaType="java.lang.String" jdbcType="VARCHAR"/>
+	</resultMap>
+	
+	
+	<select id="selectUserByUsername" resultMap="SysUser_landings" parameterType="java.lang.String">
+		SELECT Password FROM users
+		WHERE Usernumber = #{usernumber}
+	
+	</select>
+
+
+</mapper>

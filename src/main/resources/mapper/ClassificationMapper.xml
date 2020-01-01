@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="edu.swjuhc.houduan.mapper.ClassificationMapper">
+
+	<resultMap type="edu.swjuhc.houduan.model.Books" id="Books_Xh">
+		<id column="BID" property="BID" javaType="java.lang.Integer" jdbcType="INTEGER"/>
+		<result column="authorname" property="authorname" javaType="java.lang.String" jdbcType="CHAR"/>
+		<result column="bookname" property="bookname" javaType="java.lang.String" jdbcType="VARCHAR"/>
+		<result column="type" property="type" javaType="java.lang.String" jdbcType="VARCHAR"/>
+		<result column="introduce" property="introduce" javaType="java.lang.String" jdbcType="LONGVARCHAR"/>
+		<result column="image" property="image" javaType="java.lang.String" jdbcType="VARCHAR"/>
+	</resultMap>
+
+	<select id="selectAllXh" resultMap="Books_Xh">
+		SELECT BID,authorname,bookname,type,introduce,image from books
+		WHERE
+		type="玄幻"
+	</select>
+
+</mapper>
