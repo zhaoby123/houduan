@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="edu.swjuhc.houduan.mapper.DetailsMapper">
+	<resultMap type="edu.swjuhc.houduan.model.Section" id="details">
+		<result column="BID" property="BID" javaType="java.lang.Integer" jdbcType="INTEGER"/>
+		<result column="Chapter" property="Chapter" javaType="java.lang.Integer" jdbcType="INTEGER"/>
+		<result column="Content" property="Content" javaType="java.lang.String" jdbcType="LONGVARCHAR"/>
+		<result column="C_id" property="C_id" javaType="java.lang.Integer" jdbcType="INTEGER"/>
+		<result column="isshow" property="isshow" javaType="java.lang.Integer" jdbcType="INTEGER"/>
+	</resultMap>
+
+	<select id="selectAllChapter" resultMap="details">
+		SELECT Chapter,C_id from section
+		WHERE
+		isshow=1 and BID=#{BID}
+	</select>
+	
+	<select id="selectContent" resultMap="details">
+		SELECT Content from section
+		WHERE
+		C_id=#{C_id} and BID=#{BID}
+	</select>
+</mapper>

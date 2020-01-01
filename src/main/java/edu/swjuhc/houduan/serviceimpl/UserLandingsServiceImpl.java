@@ -23,7 +23,7 @@ public class UserLandingsServiceImpl implements UserLandingsService{
 		if (u0==null) {
 			i=2;
 		}else {
-			if (user.getUsernumber().equals(u0.getJ_password())) {
+			if (user.getPassword().equals(u0.getJ_password())) {
 				i = 0;
 			}else {
 				i=1;

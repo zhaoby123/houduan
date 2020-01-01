@@ -5,10 +5,11 @@ public class Books {
 	private String authorname;
 	private String bookname;
 	private String image;
-	private String sta;
+	private int sta;
 	private String type;
 	private int score;
 	private String introduce;
+	private String recommend;
 	public int getBID() {
 		return BID;
 	}
@@ -33,12 +34,6 @@ public class Books {
 	public void setImage(String image) {
 		this.image = image;
 	}
-	public String getSta() {
-		return sta;
-	}
-	public void setSta(String sta) {
-		this.sta = sta;
-	}
 	public String getType() {
 		return type;
 	}
@@ -57,9 +52,20 @@ public class Books {
 	public void setIntroduce(String introduce) {
 		this.introduce = introduce;
 	}
+	public String getRecommend() {
+		return recommend;
+	}
+	public void setRecommend(String recommend) {
+		this.recommend = recommend;
+	}
+	public void setSta(int sta) {
+		this.sta = sta;
+	}
 	@Override
 	public String toString() {
 		return "Books [BID=" + BID + ", authorname=" + authorname + ", bookname=" + bookname + ", image=" + image
-				+ ", sta=" + sta + ", type=" + type + ", score=" + score + ", introduce=" + introduce + "]";
+				+ ", sta=" + sta + ", type=" + type + ", score=" + score + ", introduce=" + introduce + ", recommend="
+				+ recommend + "]";
 	}
+
 }

@@ -1,5 +1,6 @@
 package edu.swjuhc.houduan.model;
 
+import java.sql.JDBCType;
 import java.sql.Time;
 
 public class SysUser {

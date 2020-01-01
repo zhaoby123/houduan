@@ -4,6 +4,9 @@
 	<resultMap type="edu.swjuhc.houduan.model.SysUser" id="SysUser_landings">
 		<result column="Usernumber" property="j_username" javaType="java.lang.String" jdbcType="CHAR"/>
 		<result column="Password" property="j_password" javaType="java.lang.String" jdbcType="VARCHAR"/>
+		<result column="Username" property="username" javaType="java.lang.String" jdbcType="VARCHAR"/>
+		<result column="sex" property="sex" javaType="java.lang.String" jdbcType="VARCHAR"/>
+		<result column="Author" property="Author" javaType="java.lang.String" jdbcType="VARCHAR"/>
 	</resultMap>
 	
 	
