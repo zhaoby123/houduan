@@ -16,8 +16,7 @@ public class UserLandingsController {
 	UserLandingsService userLandingsService;
 
 	@RequestMapping("/landings")
-	public JSONObject landings(@RequestBody SysUser user) {
-		System.out.println(user);
+	public JSONObject landings(SysUser user) {
 		JSONObject result = new JSONObject();
 		
 		//调用Service层

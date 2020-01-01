@@ -14,7 +14,7 @@ public class AdministratorLoginServiceImpl implements AdministratorLoginService{
 	@Override
 	public int Login(Administrator administrator) {
 		//调用mapper实现登录
-		Administrator u0=administratorLoginMapper.selectAdministratorByUsername(administrator.getUsername());
+		Administrator u0=administratorLoginMapper.selectAdministratorByUsername(administrator.getID());
 		String po=administrator.getPassword();
 		System.out.println(u0);
 		System.out.println(administrator);

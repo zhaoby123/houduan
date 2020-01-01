@@ -6,9 +6,9 @@
 	</resultMap>
 	
 	
-	<select id="selectAdministratorByUsername" resultMap="Administrator_landings" parameterType="java.lang.String">
-		SELECT Password FROM users
-		WHERE id = #{id}
+	<select id="selectAdministratorByUsername" resultMap="Administrator_landings">
+		SELECT Password FROM administrator
+		WHERE ID = #{ID}
 	
 	</select>
 	

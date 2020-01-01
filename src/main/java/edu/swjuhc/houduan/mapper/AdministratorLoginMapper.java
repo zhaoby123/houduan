@@ -9,5 +9,5 @@ import edu.swjuhc.houduan.model.Administrator;
 
 
 public interface AdministratorLoginMapper {
-	public Administrator selectAdministratorByUsername(String username);
+	public Administrator selectAdministratorByUsername(int ID);
 }

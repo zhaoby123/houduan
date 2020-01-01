@@ -18,7 +18,7 @@ public class AdministratorRegisterController {
 	public JSONObject register(@RequestBody Administrator rejister) {
 		JSONObject result=new JSONObject();
 		int i=administratorRegisterService.Register(rejister);
-		result.put("state", i);
+		result.put("state",i);
 		return result;
 	}
 	

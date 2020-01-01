@@ -14,7 +14,7 @@ public class AdministratorRegisterServiceImpl implements AdministratorRegisterSe
 	@Override
 	public int Register(Administrator administrator) {
 		// TODO Auto-generated method stub
-		Administrator m0=administratorRegisterMapper.SelectAdministratorById(administrator.getId());
+		Administrator m0=administratorRegisterMapper.SelectAdministratorById(administrator.getID());
 		int i=-2;
 		if (m0==null) {
 			i=administratorRegisterMapper.insertId(administrator);

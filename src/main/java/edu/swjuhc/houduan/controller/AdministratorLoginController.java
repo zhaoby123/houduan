@@ -15,6 +15,7 @@ import net.sf.json.JSONObject;
 public class AdministratorLoginController {
 		@Autowired
 		AdministratorLoginService  administratorLoginService;
+		
 		@RequestMapping("/login")
 		public JSONObject login(@RequestBody Administrator administrator) {
 			JSONObject result=new JSONObject();

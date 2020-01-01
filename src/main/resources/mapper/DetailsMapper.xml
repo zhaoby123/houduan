@@ -13,6 +13,7 @@
 		SELECT Chapter,C_id from section
 		WHERE
 		isshow=1 and BID=#{BID}
+		ORDER BY C_id DESC
 	</select>
 	
 	<select id="selectContent" resultMap="details">
