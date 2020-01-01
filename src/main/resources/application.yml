@@ -1,7 +1,7 @@
 spring:
   datasource:    username: root
     password: 123qq123
-    url: jdbc:mysql://mysqlhost:3306/test?useSSL=false&serverTimezone=GMT%2B8&allowPublicKeyRetrievel=true
+    url: jdbc:mysql://localhost:3306/test?useSSL=false&serverTimezone=GMT%2B8&allowPublicKeyRetrievel=true
     driver-class-name: com.mysql.cj.jdbc.Driver
 mybatis:
   mapper-locations: classpath:mapper/*.xml

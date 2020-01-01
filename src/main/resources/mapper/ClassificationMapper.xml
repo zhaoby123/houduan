@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="edu.swjuhc.houduan.mapper.ClassificationMapper">
 
-	<resultMap type="edu.swjuhc.houduan.model.Books" id="Books_Xh">
+	<resultMap type="edu.swjuhc.houduan.model.Books" id="Books_fl">
 		<id column="BID" property="BID" javaType="java.lang.Integer" jdbcType="INTEGER"/>
 		<result column="authorname" property="authorname" javaType="java.lang.String" jdbcType="CHAR"/>
 		<result column="bookname" property="bookname" javaType="java.lang.String" jdbcType="VARCHAR"/>
@@ -11,10 +11,88 @@
 		<result column="image" property="image" javaType="java.lang.String" jdbcType="VARCHAR"/>
 	</resultMap>
 
-	<select id="selectAllXh" resultMap="Books_Xh">
+	<select id="selectAllXh" resultMap="Books_fl">
 		SELECT BID,authorname,bookname,type,introduce,image from books
 		WHERE
 		type="玄幻"
+	</select>
+
+	<select id="selectAllQh" resultMap="Books_fl">
+		SELECT BID,authorname,bookname,type,introduce,image from books
+		WHERE
+		type="奇幻"
+	</select>
+
+	<select id="selectAllWx" resultMap="Books_fl">
+		SELECT BID,authorname,bookname,type,introduce,image from books
+		WHERE
+		type="武侠"
+	</select>
+
+	<select id="selectAllXx" resultMap="Books_fl">
+		SELECT BID,authorname,bookname,type,introduce,image from books
+		WHERE
+		type="仙侠"
+	</select>
+
+		<select id="selectAllDs" resultMap="Books_fl">
+		SELECT BID,authorname,bookname,type,introduce,image from books
+		WHERE
+		type="都市"
+	</select>
+
+	<select id="selectAllXs" resultMap="Books_fl">
+		SELECT BID,authorname,bookname,type,introduce,image from books
+		WHERE
+		type="现实"
+	</select>
+	
+		<select id="selectAllJs" resultMap="Books_fl">
+		SELECT BID,authorname,bookname,type,introduce,image from books
+		WHERE
+		type="军事"
+	</select>
+	
+	<select id="selectAllLs" resultMap="Books_fl">
+		SELECT BID,authorname,bookname,type,introduce,image from books
+		WHERE
+		type="历史"
+	</select>
+	
+		<select id="selectAllYx" resultMap="Books_fl">
+		SELECT BID,authorname,bookname,type,introduce,image from books
+		WHERE
+		type="游戏"
+	</select>
+	
+	<select id="selectAllTy" resultMap="Books_fl">
+		SELECT BID,authorname,bookname,type,introduce,image from books
+		WHERE
+		type="体育"
+	</select>
+	
+		<select id="selectAllKh" resultMap="Books_fl">
+		SELECT BID,authorname,bookname,type,introduce,image from books
+		WHERE
+		type="科幻"
+	</select>
+	
+	<select id="selectAllXyly" resultMap="Books_fl">
+		SELECT BID,authorname,bookname,type,introduce,image from books
+		WHERE
+		type="悬疑灵异"
+	</select>
+	
+		<select id="selectAllNsw" resultMap="Books_fl">
+		SELECT BID,authorname,bookname,type,introduce,image from books
+		WHERE
+		type="女生网"
+	</select>
+	
+	<select id="selectAllQxs" resultMap="Books_fl">
+		SELECT BID,authorname,bookname,type,introduce,image from books
+		WHERE
+		type="轻小说"
 	</select>
 
 </mapper>

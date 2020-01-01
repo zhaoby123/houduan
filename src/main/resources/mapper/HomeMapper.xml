@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="edu.swjuhc.houduan.mapper.HomeMapper">
+	<resultMap type="edu.swjuhc.houduan.model.Books" id="Books_zhuye">
+		<id column="BID" property="BID" javaType="java.lang.Integer" jdbcType="INTEGER"/>
+		<result column="authorname" property="authorname" javaType="java.lang.String" jdbcType="CHAR"/>
+		<result column="bookname" property="bookname" javaType="java.lang.String" jdbcType="VARCHAR"/>
+		<result column="type" property="type" javaType="java.lang.String" jdbcType="VARCHAR"/>
+		<result column="introduce" property="introduce" javaType="java.lang.String" jdbcType="LONGVARCHAR"/>
+		<result column="image" property="image" javaType="java.lang.String" jdbcType="VARCHAR"/>
+	</resultMap>
+	
+	<select id="selectAllLbt" resultMap="Books_zhuye">
+		SELECT BID,image from books
+		WHERE
+		recommend="轮播图"
+	</select>
+	
+	<select id="selectAllDszq" resultMap="Books_zhuye">
+		SELECT BID,image from books
+		WHERE
+		recommend="大神专区"
+	</select>
+	
+		<select id="selectAllJpxs" resultMap="Books_zhuye">
+		SELECT BID,image from books
+		WHERE
+		recommend="精品小说"
+	</select>
+	
+		<select id="selectAllNszq" resultMap="Books_zhuye">
+		SELECT BID,image from books
+		WHERE
+		recommend="男生专区"
+	</select>
+	
+		<select id="selectAllNpb" resultMap="Books_zhuye">
+		SELECT BID,image from books
+		WHERE
+		recommend="男频榜"
+	</select>
+	
+		<select id="selectAllNvszq" resultMap="Books_zhuye">
+		SELECT BID,image from books
+		WHERE
+		recommend="女生专区"
+	</select>
+	
+		<select id="selectAllNvpb" resultMap="Books_zhuye">
+		SELECT BID,image from books
+		WHERE
+		recommend="女频榜"
+	</select>
+	
+	<select id="selectAllBzqt" resultMap="Books_zhuye">
+		SELECT BID,image from books
+		WHERE
+		recommend="本周强推"
+	</select>
+	
+	<select id="selectAllBjtj" resultMap="Books_zhuye">
+		SELECT BID,image from books
+		WHERE
+		recommend="编辑推荐"
+	</select>
+
+</mapper>
