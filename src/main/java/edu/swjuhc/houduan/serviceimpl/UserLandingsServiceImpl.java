@@ -17,15 +17,17 @@ public class UserLandingsServiceImpl implements UserLandingsService{
 	public int Landings(SysUser user) {
 		// TODO Auto-generated method stub
 		//调用mapper实现登陆
-		SysUser u0 = userLandingsMapper.selectUserByUsername(user.getUsername());
-		String p0 = user.getPassword();
-		System.out.println(u0);
-		System.out.println(user);
+		SysUser u0 = userLandingsMapper.selectUserByUsername(user.getUsernumber());
+		String p0 = user.getPassword();	
 		int i = -1;
-		if (u0!=null) {
-			i=0;
+		if (u0==null) {
+			i=2;
 		}else {
-			i = 2;
+			if (user.getUsernumber().equals(u0.getJ_password())) {
+				i = 0;
+			}else {
+				i=1;
+			}
 		}
 		
 		
