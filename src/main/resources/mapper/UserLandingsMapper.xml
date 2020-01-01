@@ -9,7 +9,7 @@
 	
 	<select id="selectUserByUsername" resultMap="SysUser_landings" parameterType="java.lang.String">
 		SELECT Password FROM users
-		WHERE Usernumber = #{usernumber}
+		WHERE usernumber = #{usernumber}
 	
 	</select>
 

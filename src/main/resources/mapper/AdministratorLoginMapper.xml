@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="edu.swjuhc.houduan.mapper.AdministratorLoginMapper">
+	<resultMap type="edu.swjuhc.houduan.model.Administrator" id="Administrator_landings">
+		<result column="Password" property="j_password" javaType="java.lang.String" jdbcType="VARCHAR"/>
+	</resultMap>
+	
+	
+	<select id="selectAdministratorByUsername" resultMap="Administrator_landings" parameterType="java.lang.String">
+		SELECT Password FROM users
+		WHERE id = #{id}
+	
+	</select>
+	
+
+
+
+</mapper>
