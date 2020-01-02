@@ -35,7 +35,7 @@ public class UserLandingsServiceImpl implements UserLandingsService{
 	@Override
 	public int Registration(SysUser user) {
 		// TODO Auto-generated method stub
-		//调用mapper实现登陆
+		//调用mapper实现注册
 		SysUser u0 = userLandingsMapper.selectUserByUsername(user.getUsernumber());
 		String p0 = user.getPassword();	
 		int i = -1;
