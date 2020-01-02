@@ -11,7 +11,7 @@
  Target Server Version : 80017
  File Encoding         : 65001
 
- Date: 02/01/2020 05:21:06
+ Date: 02/01/2020 12:27:15
 */
 
 SET NAMES utf8mb4;
@@ -23,11 +23,10 @@ SET FOREIGN_KEY_CHECKS = 0;
 DROP TABLE IF EXISTS `administrator`;
 CREATE TABLE `administrator`  (
   `ID` int(11) NOT NULL AUTO_INCREMENT COMMENT '管理ID',
-  `adName` varchar(30) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '用户名',
+  `adName` varchar(30) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL COMMENT '用户名',
   `Name` varchar(30) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL COMMENT '姓名',
   `Number` char(11) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL COMMENT '手机号',
   `Password` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL COMMENT '密码',
-  `Buildtime` datetime(0) NOT NULL COMMENT '创建时间',
   PRIMARY KEY (`ID`) USING BTREE,
   UNIQUE INDEX `Number`(`Number`) USING BTREE
 ) ENGINE = InnoDB AUTO_INCREMENT = 20180004 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
@@ -35,9 +34,9 @@ CREATE TABLE `administrator`  (
 -- ----------------------------
 -- Records of administrator
 -- ----------------------------
-INSERT INTO `administrator` VALUES (20180001, '小一', '张三', '13002309999', '123451', '2019-01-01 00:00:00');
-INSERT INTO `administrator` VALUES (20180002, '小二', '李四', '13002309998', '123457', '2019-01-01 03:00:00');
-INSERT INTO `administrator` VALUES (20180003, '小三', '王五', '13002309997', '123458', '2018-01-02 00:00:00');
+INSERT INTO `administrator` VALUES (20180001, '小一', '张三', '13002309999', '123451');
+INSERT INTO `administrator` VALUES (20180002, '小二', '李四', '13002309998', '123457');
+INSERT INTO `administrator` VALUES (20180003, '小三', '王五', '13002309997', '123458');
 
 -- ----------------------------
 -- Table structure for books
@@ -276,7 +275,6 @@ CREATE TABLE `users`  (
   `Usernumber` char(11) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL COMMENT '手机号',
   `sex` varchar(10) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL COMMENT '性别',
   `Password` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL COMMENT '密码',
-  `Regtime` datetime(0) NOT NULL COMMENT '注册时间',
   `Author` varchar(10) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL COMMENT '作者令牌(1作者，0读者）',
   `Username` varchar(30) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL COMMENT '用户名',
   PRIMARY KEY (`Usernumber`) USING BTREE,
@@ -287,11 +285,12 @@ CREATE TABLE `users`  (
 -- ----------------------------
 -- Records of users
 -- ----------------------------
-INSERT INTO `users` VALUES ('周围', '12345678901', '男', '123456', '2019-01-01 00:00:00', '1', '辰东');
-INSERT INTO `users` VALUES ('刘潇', '13002309915', '女', '111113', '2019-12-16 09:18:26', '0', '啊哈');
-INSERT INTO `users` VALUES ('江一燕', '13002309916', '女', '111112', '2019-11-14 20:13:08', '1', '花容月下');
-INSERT INTO `users` VALUES ('林宥嘉', '13002309917', '男', '111111', '2019-12-03 20:09:41', '1', '天蚕土豆');
-INSERT INTO `users` VALUES ('何蓉', '15023243554', '女', '111114', '2019-11-20 05:21:02', '1', '囧囧有妖');
+INSERT INTO `users` VALUES ('1', '1', '1', '1', '1', '1');
+INSERT INTO `users` VALUES ('周围', '12345678901', '男', '123456', '1', '辰东');
+INSERT INTO `users` VALUES ('刘潇', '13002309915', '女', '111113', '0', '啊哈');
+INSERT INTO `users` VALUES ('江一燕', '13002309916', '女', '111112', '1', '花容月下');
+INSERT INTO `users` VALUES ('林宥嘉', '13002309917', '男', '111111', '1', '天蚕土豆');
+INSERT INTO `users` VALUES ('何蓉', '15023243554', '女', '111114', '1', '囧囧有妖');
 
 -- ----------------------------
 -- Table structure for working

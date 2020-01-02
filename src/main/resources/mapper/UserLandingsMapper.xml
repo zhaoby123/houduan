@@ -15,6 +15,14 @@
 		WHERE usernumber = #{usernumber}
 	
 	</select>
+	
+	<insert id="insertUser" parameterType="java.lang.String">
+		INSERT into users
+		(Name,Usernumber,sex,Password,Author,Username)
+		VALUES
+		(#{name},#{usernumber},#{sex},#{password},#{Author},#{username})
+	
+	</insert>
 
 
 </mapper>

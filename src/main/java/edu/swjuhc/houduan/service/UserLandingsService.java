@@ -4,4 +4,7 @@ import edu.swjuhc.houduan.model.SysUser;
 
 public interface UserLandingsService {
 	public int Landings(SysUser user);
+	
+	
+	public int Registration(SysUser user);
 }

@@ -28,10 +28,22 @@ public class UserLandingsServiceImpl implements UserLandingsService{
 			}else {
 				i=1;
 			}
-		}
-		
-		
-		
+		}		
+		return i;
+	}
+	
+	@Override
+	public int Registration(SysUser user) {
+		// TODO Auto-generated method stub
+		//调用mapper实现登陆
+		SysUser u0 = userLandingsMapper.selectUserByUsername(user.getUsernumber());
+		String p0 = user.getPassword();	
+		int i = -1;
+		if (u0==null) {
+			i = userLandingsMapper.insertUser(user);
+		}else {
+			i = 2;
+		}	
 		return i;
 	}
 

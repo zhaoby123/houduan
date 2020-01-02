@@ -9,4 +9,5 @@ import edu.swjuhc.houduan.model.SysUser;
 public interface UserLandingsMapper {
 	public SysUser selectUserByUsername(String username);
 	
+	public int insertUser(SysUser user);
 }

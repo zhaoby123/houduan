@@ -24,4 +24,15 @@ public class UserLandingsController {
 		result.put("state", i);
 		return result;
 	}
+	
+	@RequestMapping("/Registration")
+	public JSONObject Registration(SysUser user) {
+		JSONObject result = new JSONObject();
+		
+		//调用Service层
+		int i = userLandingsService.Registration(user);
+		result.put("state", i);
+		return result;
+	}
+	
 }
