@@ -8,7 +8,7 @@ public class Administrator {
 	private String adName;
 	private String password;
 	private String Name;
-	private Time Buildtime;
+	private String Number;
 	public String getJ_password() {
 		return j_password;
 	}
@@ -39,16 +39,17 @@ public class Administrator {
 	public void setName(String name) {
 		Name = name;
 	}
-	public Time getBuildtime() {
-		return Buildtime;
+	public String getNumber() {
+		return Number;
 	}
-	public void setBuildtime(Time buildtime) {
-		Buildtime = buildtime;
+	public void setNumber(String number) {
+		Number = number;
 	}
 	@Override
 	public String toString() {
 		return "Administrator [j_password=" + j_password + ", ID=" + ID + ", adName=" + adName + ", password="
-				+ password + ", Name=" + Name + ", Buildtime=" + Buildtime + "]";
+				+ password + ", Name=" + Name + ", Number=" + Number + "]";
 	}
+
 	
 }
